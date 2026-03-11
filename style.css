@@ -1,9 +1,4 @@
-/* Moderne Schrift */
-body {
-    font-family: 'Inter', sans-serif;
-}
-
-/* Mobile Blocker */
+/* --- MOBILE BLOCKER --- */
 .mobile-message {
     display: none;
     text-align: center;
@@ -23,10 +18,10 @@ body {
 /* Mobile & Tablet deaktivieren */
 @media (max-width: 1024px) {
     .desktop-only {
-        display: none;
+        display: none !important;
     }
     .mobile-message {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
