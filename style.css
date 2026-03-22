@@ -1,29 +1,74 @@
-/* --- MOBILE BLOCKER --- */
-.mobile-message {
-    display: none;
-    text-align: center;
-    padding: 40px;
-    color: white;
-    background: #0b0c10;
-    height: 100vh;
-    font-size: 1.2rem;
-    line-height: 1.6;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-/* Desktop sichtbar */
-.desktop-only {
-    display: block;
+body, html {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #74ebd5, #ACB6E5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Mobile & Tablet deaktivieren */
-@media (max-width: 1024px) {
-    .desktop-only {
-        display: none !important;
-    }
-    .mobile-message {
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+#gameContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  background-color: #f0f8ff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+canvas {
+  display: block;
+  background: #87CEEB;
+  width: 100%;
+  height: 100%;
+}
+
+.screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  color: #333;
+  margin-top: 10px;
 }
